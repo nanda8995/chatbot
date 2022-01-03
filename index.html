@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayLoad: ('/get_started'),  
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005",
+                    subtitle:"Say hi and get Started!",
+                    showMessageDate:true,
+                    inputTextFieldHint:'Whats in your mind',
+                    
+                   
+                    // add other props here
+                  },
+                  null
+                );
+              }), 
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+    </head>
+    <body>
+      <h1>Welcome to chatbot</h1>
+    </body>
+    </html>
